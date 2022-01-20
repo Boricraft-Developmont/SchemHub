@@ -24,6 +24,10 @@ The pre-release of this project will be on the dashboard of [our official site](
 
 Visit [our official website](https://borisjeletich.nl/) for more information or support.
 Contact us at, support@borisjeletich.nl or join our [Discord Server](https://discord.gg/7QUxbsSJsN).
+## Related projects
+
+- [SchemHub-API](https://github.com/Boricraft-Developmont/Schemhub-API)
+- [SchemWrap](https://github.com/Boricraft-Developmont/SchemWrap)
 ## Other projects
 
 Here are some other projects you should check out!
