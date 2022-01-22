@@ -1,33 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Card from './components/Card.jsx';
+import {getPosts} from 'schemwrap'
 
-function Main(){
-    return (
-      <div className="wrapper">
-        <Card />
-      </div>
-    );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoading: true,
+      posts: []
+    }
   }
 
-function Card(props){
-  return (
-    <div className="card" >
-      <div className="card_body">
-        <img src={props.img} />
-        <h2 className="card_title">{props.title}</h2>
-        <p className="card_desc">{props.desc}</p>
+  async componentDidMount() {
+    const response = await getPosts();
+    await this.setState({ posts: response, isLoading: false });
+  }
 
-      </div>
-    </div>
-  )
+  render() {
+    if (this.state.isLoading) {
+      return <p>Loading...</p>
+    }else{
+      return (
+        <div className="App">
+          <div className="row row-cols-2">
+            {this.state.posts.data.map(post => {
+              return <Card key={post.id} title={post.title} image={post.images} />;
+            })}
+          </div>
+        </div>
+      );
+    }
+      
+  }
+    
 }
-  
-  
+
+
   // ========================================
   
   ReactDOM.render(
-    <Main />,
+    <App />,
     document.getElementById('root')
   );
   
