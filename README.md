@@ -3,6 +3,7 @@
 
 ![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)
 ![GitHub issues](https://img.shields.io/github/issues/Boricraft-Developmont/schemhub)
+[![CodeQL](https://github.com/Boricraft-Developmont/SchemHub/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/Boricraft-Developmont/SchemHub/actions/workflows/codeql-analysis.yml)
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
 </a>
