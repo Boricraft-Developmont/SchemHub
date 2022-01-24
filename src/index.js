@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Card from './components/Card.jsx';
 import {getPosts} from 'schemwrap'
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -26,7 +27,7 @@ class App extends Component {
         <div className="App">
           <div className="row row-cols-2">
             {this.state.posts.data.map(post => {
-              return <Card key={post.id} title={post.title} image={post.images} />;
+              return <Card key={post.id} title={post.title} image={post.images} /> 
             })}
           </div>
         </div>
@@ -41,7 +42,9 @@ class App extends Component {
   // ========================================
   
   ReactDOM.render(
-    <App />,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
     document.getElementById('root')
   );
   
